@@ -1,13 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    Hello
-    <script src="app.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <script src="https://kit.fontawesome.com/31d79c54ec.js" crossorigin="anonymous"></script>
+  <title>JS Weather App</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="weather-app">
+      <header class="search-form">
+        <form class="form-inline">
+          <div class="form-group" <label for="City">City: </label>
+            <input type="text" class="form-control" id="inputTypeCity" placeholder="Type a city" />
+            <input type="submit" value="Search" id="search">
+            <input type="button" value="Current" id="current">
+        </form>
+      </header>
+      <div class="row current-weather">
+        <div class="col-4 city-weekday">
+          <h1>
+            Paris
+          </h1>
+          <ul>
+            <li>
+              Saturday 10:40h
+            </li>
+            <li>
+              Sunny
+            </li>
+          </ul>
+        </div>
+        <div class="row image-temperature">
+          <i class="fas fa-sun image-today-weather"></i>
+          12ºC | ºF
+        </div>
+        <div class="row humidity-wind">
+          <ul>
+            <li>
+              Humidity: 46%
+            </li>
+            <li>
+              Wind: 4 km/h
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+
+    </div>
+    <small>
+      <a href="https://github.com/MadalenaAf/SheCodesPlus-WeatherApp" target="_blank"> Open source code </a>, by
+      Madalena Ferreira
+    </small>
+  </div>
+
+  <script src="src/app.js"></script>
+</body>
+
 </html>
