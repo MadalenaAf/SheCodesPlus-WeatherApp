@@ -1,10 +1,37 @@
 .body {
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .weather-app {
   border: 2px solid #ff3366;
   max-width: 800px;
   margin: 50px auto;
   padding: 50px;
   border-radius: 5px;
+}
+h1 {
+  font-size: 45px;
+  color: #b3a7a7;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  color: #b3a7a7;
+  font-size: 18px;
+}
+
+.image-today-weather {
+  color: #f1ae3a;
+  font-size: 450%;
+}
+.temperature-units {
+  color: #b3a7a7;
+  font-size: 18px;
+  position: relative;
+  top: -30px;
+}
+.temperature-value {
+  color: #b3a7a7;
+  font-size: 65px;
 }

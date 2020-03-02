@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css" />
+
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -14,51 +14,54 @@
       src="https://kit.fontawesome.com/31d79c54ec.js"
       crossorigin="anonymous"
     ></script>
-
+    <link rel="stylesheet" href="src/style.css" />
     <title>JS Weather App</title>
   </head>
 
   <body>
     <div class="container">
-      <div class="weather-app">
-        <div class="row current-weather">
-          <div class="col-4 city-weekday">
-            <h1>
-              Paris
-            </h1>
-            <ul>
-              <li>
-                Saturday 10:40h
-              </li>
-              <li>
-                Sunny
-              </li>
-            </ul>
-          </div>
-          <div class="col-4 image-temperature">
-            <i class="fas fa-sun image-today-weather"></i>
-            12ºC | ºF
-          </div>
-          <div class="col-4 humidity-wind">
-            <ul>
-              <li>
-                Humidity: 46%
-              </li>
-              <li>
-                Wind: 4 km/h
-              </li>
-            </ul>
+      <div class="weather-app-total">
+        <div class="weather-app">
+          <div class="row current-weather">
+            <div class="col-4 city-weekday">
+              <h1>
+                Paris
+              </h1>
+              <ul>
+                <li>
+                  Saturday 10:40h
+                </li>
+                <li>
+                  Sunny
+                </li>
+              </ul>
+            </div>
+            <div class="col-4 image-temperature">
+              <i class="fas fa-sun image-today-weather"></i>
+              <span class="temperature-value">12 </span
+              ><span class="temperature-units">ºC | ºF</span>
+            </div>
+            <div class="col-4 humidity-wind">
+              <ul>
+                <li id="humidity">
+                  Humidity: 46%
+                </li>
+                <li id="wind">
+                  Wind: 4 km/h
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
+        <small>
+          <a
+            href="https://github.com/MadalenaAf/SheCodesPlus-WeatherApp"
+            target="_blank"
+          >
+            Open source code </a
+          >, by Madalena Ferreira
+        </small>
       </div>
-      <small>
-        <a
-          href="https://github.com/MadalenaAf/SheCodesPlus-WeatherApp"
-          target="_blank"
-        >
-          Open source code </a
-        >, by Madalena Ferreira
-      </small>
     </div>
 
     <script src="src/app.js"></script>
