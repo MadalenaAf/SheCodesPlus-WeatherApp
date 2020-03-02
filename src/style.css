@@ -1,11 +1,14 @@
 .body {
   font-family: Arial, Helvetica, sans-serif;
 }
-
+.weather-app-total {
+  max-width: 800px;
+  margin: auto;
+}
 .weather-app {
   border: 2px solid #ff3366;
   max-width: 800px;
-  margin: 50px auto;
+  margin: 50px auto 0;
   padding: 50px;
   border-radius: 5px;
 }
@@ -24,12 +27,15 @@ ul {
 .image-today-weather {
   color: #f1ae3a;
   font-size: 450%;
+  position: relative;
+  left: -10px;
 }
 .temperature-units {
   color: #b3a7a7;
   font-size: 18px;
   position: relative;
   top: -30px;
+  left: -10px;
 }
 .temperature-value {
   color: #b3a7a7;
