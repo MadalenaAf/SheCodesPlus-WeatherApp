@@ -15,6 +15,8 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <title>JS Weather App</title>
   </head>
 
@@ -31,14 +33,14 @@
                 <li>
                   Saturday 10:40h
                 </li>
-                <li>
+                <li id="description">
                   Sunny
                 </li>
               </ul>
             </div>
             <div class="col-4 image-temperature">
               <i class="fas fa-sun image-today-weather"></i>
-              <span class="temperature-value">12 </span
+              <span id="temperature-value">12 </span
               ><span class="temperature-units">ºC | <a href="XX">Fº</a> </span>
             </div>
             <div class="col-4 humidity-wind">

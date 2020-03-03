@@ -35,9 +35,9 @@ ul {
   font-size: 18px;
   position: relative;
   top: -30px;
-  left: -10px;
+  left: -2px;
 }
-.temperature-value {
+#temperature-value {
   color: #b3a7a7;
   font-size: 65px;
 }
