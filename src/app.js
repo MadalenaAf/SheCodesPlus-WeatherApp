@@ -5,6 +5,7 @@ function displayTemperarture(response) {
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
+  let iconElement = document.querySelector("#icon-today-weather");
 
   cityElement.innerHTML = response.data.name;
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
@@ -12,7 +13,10 @@ function displayTemperarture(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = arrangeDate(response.data.dt * 1000);
-  console.log(response.data.dt * 1000);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function arrangeDate(timestamp) {
@@ -36,12 +40,12 @@ function arrangeDate(timestamp) {
     "Saturday"
   ];
   let day = days[date.getDay()];
-  console.log(day);
   return `${day} ${hour}:${minutes}h`;
 }
 
 let apiKey = "ab89347cacce1a19cd08ea5cb4878ce1";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Viena&appid=${apiKey}&units=metric`;
+let city = "Sidney";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 console.log(apiUrl);
 
 axios.get(apiUrl).then(displayTemperarture);
