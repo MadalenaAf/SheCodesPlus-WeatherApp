@@ -18,12 +18,12 @@ function displayTemperarture(response) {
 function arrangeDate(timestamp) {
   let date = new Date(timestamp);
   let hour = date.getHours();
-  if (hour < 0) {
-    hour = `0 ${hour}`;
+  if (hour < 10) {
+    hour = `0${hour}`;
   }
   let minutes = date.getMinutes();
   if (minutes < 10) {
-    minutes = `0 ${minutes}`;
+    minutes = `0${minutes}`;
   }
 
   let days = [
@@ -41,7 +41,7 @@ function arrangeDate(timestamp) {
 }
 
 let apiKey = "ab89347cacce1a19cd08ea5cb4878ce1";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}&units=metric`;
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Viena&appid=${apiKey}&units=metric`;
 console.log(apiUrl);
 
 axios.get(apiUrl).then(displayTemperarture);

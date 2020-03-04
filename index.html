@@ -26,20 +26,18 @@
         <div class="weather-app">
           <div class="row current-weather">
             <div class="col-4 city-weekday">
-              <h1 id="city">
-                Paris
+              <h1>
+                <span id="city"></span>
               </h1>
               <ul>
-                <li id="date">
-                  Saturday 10:40h
-                </li>
-                <li id="description">
-                  Sunny
+                <li>Last updated : <span id="date"></span></li>
+                <li>
+                  <span id="description"></span>
                 </li>
               </ul>
             </div>
             <div class="col-4 image-temperature">
-              <i class="fas fa-sun image-today-weather"></i>
+              <i class="fas fa-sun" id="icon-today-weather"></i>
               <span id="temperature-value">12 </span
               ><span class="temperature-units">ºC | <a href="XX">Fº</a> </span>
             </div>

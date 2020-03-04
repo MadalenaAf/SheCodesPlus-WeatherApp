@@ -27,7 +27,7 @@ ul {
   text-transform: uppercase;
 }
 
-.image-today-weather {
+#icon-today-weather {
   color: #f1ae3a;
   font-size: 450%;
   position: relative;
