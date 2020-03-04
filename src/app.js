@@ -1,4 +1,4 @@
-function displayTemperarture(response) {
+function displayTemperature(response) {
   let cityElement = document.querySelector("#city");
   let temperatureElement = document.querySelector("#temperature-value");
   let descriptionElement = document.querySelector("#description");
@@ -48,4 +48,13 @@ let city = "Sidney";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 console.log(apiUrl);
 
-axios.get(apiUrl).then(displayTemperarture);
+axios.get(apiUrl).then(displayTemperature);
+
+function makeSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+let formElement = document.querySelector("#search-form");
+formElement.addEventListener("submit", makeSubmit);
