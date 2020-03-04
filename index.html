@@ -26,7 +26,7 @@
         <div class="weather-app">
           <div class="row current-weather">
             <div class="col-4 city-weekday">
-              <h1>
+              <h1 id="city">
                 Paris
               </h1>
               <ul>
@@ -45,12 +45,8 @@
             </div>
             <div class="col-4 humidity-wind">
               <ul>
-                <li id="humidity">
-                  Humidity: 46%
-                </li>
-                <li id="wind">
-                  Wind: 4 km/h
-                </li>
+                <li>Humidity: <span id="humidity"></span> %</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
               </ul>
             </div>
           </div>
