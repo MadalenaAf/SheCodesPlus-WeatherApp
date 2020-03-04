@@ -2,18 +2,18 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 .weather-app-total {
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
 }
 .weather-app {
   border: 2px solid #ff3366;
-  max-width: 800px;
+  max-width: 900px;
   margin: 50px auto 0;
   padding: 50px;
   border-radius: 5px;
 }
 h1 {
-  font-size: 45px;
+  font-size: 40px;
   color: #b3a7a7;
 }
 ul {
@@ -22,6 +22,25 @@ ul {
   list-style: none;
   color: #b3a7a7;
   font-size: 18px;
+}
+header {
+  margin-bottom: 30px;
+}
+form {
+  max-width: 50%;
+}
+#search-form {
+  color: #b3a7a7;
+  margin: 0 auto;
+  font-size: 18px;
+}
+#city-input {
+  margin: 0 15px 0 5px;
+  font-size: 15px;
+}
+#search {
+  color: #76b9c8;
+  font-size: 15px;
 }
 #description:first-letter {
   text-transform: uppercase;
