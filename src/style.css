@@ -63,3 +63,11 @@ form {
   color: #b3a7a7;
   font-size: 65px;
 }
+
+.temperature-units .active {
+  color: #b3a7a7;
+  cursor: default;
+}
+.temperature-units .active:hover {
+  text-decoration: none;
+}
