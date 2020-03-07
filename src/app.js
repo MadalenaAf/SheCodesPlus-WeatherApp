@@ -43,12 +43,12 @@ function arrangeDate(timestamp) {
   return `${day} ${hour}:${minutes}h`;
 }
 
-let apiKey = "ab89347cacce1a19cd08ea5cb4878ce1";
-let city = "Sidney";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-console.log(apiUrl);
+function search(city) {
+  let apiKey = "ab89347cacce1a19cd08ea5cb4878ce1";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-axios.get(apiUrl).then(displayTemperature);
+  axios.get(apiUrl).then(displayTemperature);
+}
 
 function makeSubmit(event) {
   event.preventDefault();
