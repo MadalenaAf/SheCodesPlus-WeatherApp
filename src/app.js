@@ -45,10 +45,38 @@ function arrangeDate(timestamp) {
   return `${day} ${hour}:${minutes}h`;
 }
 
+function displayForecast(response) {
+  forecastElement = document.querySelector("#forecast");
+  let forecast = response.data.list[0];
+  console.log(forecast);
+
+  forecastElement.innerHTML = ` 
+  <div class="col-2">
+     <div class="forecast-hour">
+        12:00h
+      </div>
+      <img
+        src= "http://openweathermap.org/img/wn/${
+          forecast.weather[0].icon
+        }@2x.png"
+        alt="icon"
+      />
+      <div class="forecast-min-max">
+        Min ${Math.round(forecast.main.temp_min)}º / Max ${Math.round(
+    forecast.main.temp_max
+  )}º
+      </div>
+    </div>`;
+}
+
 function search(city) {
   let apiKey = "ab89347cacce1a19cd08ea5cb4878ce1";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+  console.log(apiUrl);
 }
 
 function makeSubmit(event) {

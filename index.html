@@ -40,7 +40,7 @@
             </form>
           </header>
           <div class="row current-weather">
-            <div class="col-4 city-weekday">
+            <div class="col-6 city-weekday">
               <h1>
                 <span id="city"></span>
               </h1>
@@ -51,71 +51,20 @@
                 </li>
               </ul>
             </div>
-            <div class="col-4 image-temperature">
+            <div class="col-6 image-temperature">
               <img src="" alt="icon" id="icon-today-weather" />
               <span id="temperature-value">12 </span
               ><span class="temperature-units"
                 ><a href="XX" id="celsius-link" class="active">Cº</a> |
                 <a href="YY" id="fahrenheit-link">Fº</a>
               </span>
-            </div>
-            <div class="col-4 humidity-wind">
               <ul>
                 <li>Humidity: <span id="humidity"></span> %</li>
                 <li>Wind: <span id="wind"></span> km/h</li>
               </ul>
             </div>
           </div>
-          <div class="row forecast">
-            <div class="col-3">
-              <div class="forecast-hour">
-                12:00h
-              </div>
-              <img
-                src="http://openweathermap.org/img/wn/10d@2x.png"
-                alt="icon"
-              />
-              <div class="forecast-min-max">
-                Min 7º / Max 10º
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="forecast-hour">
-                15:00h
-              </div>
-              <img
-                src="http://openweathermap.org/img/wn/10d@2x.png"
-                alt="icon"
-              />
-              <div class="forecast-min-max">
-                Min 7º / Max 10º
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="forecast-hour">
-                18:00h
-              </div>
-              <img
-                src="http://openweathermap.org/img/wn/10d@2x.png"
-                alt="icon"
-              />
-              <div class="forecast-min-max">
-                Min 7º / Max 10º
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="forecast-hour">
-                21:00h
-              </div>
-              <img
-                src="http://openweathermap.org/img/wn/10d@2x.png"
-                alt="icon"
-              />
-              <div class="forecast-min-max">
-                Min 7º / Max 10º
-              </div>
-            </div>
-          </div>
+          <div class="row forecast" id="forecast"></div>
         </div>
         <small>
           <a

@@ -57,7 +57,7 @@ form {
   font-size: 18px;
   position: relative;
   top: -30px;
-  left: -2px;
+  left: 2px;
 }
 #temperature-value {
   color: #b3a7a7;
