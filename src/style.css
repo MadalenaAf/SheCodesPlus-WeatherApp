@@ -71,3 +71,9 @@ form {
 .temperature-units .active:hover {
   text-decoration: none;
 }
+.forecast {
+  margin-top: 30px;
+  color: #b3a7a7;
+  text-align: center;
+  font-size: 15px;
+}
