@@ -23,14 +23,6 @@ function displayTemperature(response) {
 
 function arrangeDate(timestamp) {
   let date = new Date(timestamp);
-  let hour = date.getHours();
-  if (hour < 10) {
-    hour = `0${hour}`;
-  }
-  let minutes = date.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
 
   let days = [
     "Sunday",
@@ -42,18 +34,33 @@ function arrangeDate(timestamp) {
     "Saturday"
   ];
   let day = days[date.getDay()];
-  return `${day} ${hour}:${minutes}h`;
+  return `${day} ${formatHours(timestamp)}`;
+}
+
+function formatHours(timestamp) {
+  let date = new Date(timestamp);
+  let hour = date.getHours();
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${hour}:${minutes}h`;
 }
 
 function displayForecast(response) {
-  forecastElement = document.querySelector("#forecast");
-  let forecast = response.data.list[0];
-  console.log(forecast);
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = null;
+  let forecast = null;
 
-  forecastElement.innerHTML = ` 
+  for (let index = 0; index < 6; index++) {
+    forecast = response.data.list[index];
+    forecastElement.innerHTML += ` 
   <div class="col-2">
      <div class="forecast-hour">
-        12:00h
+        ${formatHours(forecast.dt * 1000)}
       </div>
       <img
         src= "http://openweathermap.org/img/wn/${
@@ -63,10 +70,11 @@ function displayForecast(response) {
       />
       <div class="forecast-min-max">
         Min ${Math.round(forecast.main.temp_min)}º / Max ${Math.round(
-    forecast.main.temp_max
-  )}º
+      forecast.main.temp_max
+    )}º
       </div>
     </div>`;
+  }
 }
 
 function search(city) {
