@@ -2,26 +2,26 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 .weather-app-total {
-  max-width: 900px;
+  max-width: 750px;
   margin: auto;
 }
 .weather-app {
-  border: 2px solid #ff3366;
-  max-width: 900px;
+  border: 3px solid #1e7e81;
+  max-width: 750px;
   margin: 50px auto 0;
-  padding: 50px;
+  padding: 40px;
   border-radius: 5px;
 }
 h1 {
-  font-size: 40px;
-  color: #b3a7a7;
+  font-size: 30px;
+  color: #407072;
 }
 ul {
   padding: 0;
   margin: 0;
   list-style: none;
-  color: #b3a7a7;
-  font-size: 18px;
+  color: #7e7373;
+  font-size: 15px;
 }
 header {
   margin-bottom: 30px;
@@ -30,9 +30,9 @@ form {
   max-width: 50%;
 }
 #search-form {
-  color: #b3a7a7;
+  color: #7e7373;
   margin: 0 auto;
-  font-size: 18px;
+  font-size: 15px;
 }
 #city-input {
   margin: 0 15px 0 5px;
@@ -42,30 +42,34 @@ form {
   color: #76b9c8;
   font-size: 15px;
 }
-#description:first-letter {
+.city-weekday {
+  padding: 0 40px;
+}
+li:first-letter {
   text-transform: uppercase;
 }
 
 #icon-today-weather {
-  color: #f1ae3a;
-  font-size: 450%;
   position: relative;
   left: -10px;
+  top: -20px;
+  width: 100px;
+  height: 100px;
 }
 .temperature-units {
-  color: #b3a7a7;
+  color: #7e7373;
   font-size: 18px;
   position: relative;
   top: -30px;
   left: 2px;
 }
 #temperature-value {
-  color: #b3a7a7;
-  font-size: 65px;
+  color: #1e7e81;
+  font-size: 70px;
 }
 
 .temperature-units .active {
-  color: #b3a7a7;
+  color: #7e7373;
   cursor: default;
 }
 .temperature-units .active:hover {
@@ -73,7 +77,11 @@ form {
 }
 .forecast {
   margin-top: 30px;
-  color: #b3a7a7;
+  color: #7e7373;
   text-align: center;
-  font-size: 15px;
+  font-size: 13px;
+}
+.forecast img {
+  width: 60px;
+  height: 60px;
 }
