@@ -21,7 +21,7 @@ ul {
   margin: 0;
   list-style: none;
   color: #7e7373;
-  font-size: 15px;
+  font-size: 18px;
 }
 header {
   margin-bottom: 30px;
@@ -58,9 +58,9 @@ li:first-letter {
 }
 .temperature-units {
   color: #7e7373;
-  font-size: 18px;
+  font-size: 15px;
   position: relative;
-  top: -30px;
+  top: -38px;
   left: 2px;
 }
 #temperature-value {
@@ -79,9 +79,9 @@ li:first-letter {
   margin-top: 30px;
   color: #7e7373;
   text-align: center;
-  font-size: 13px;
+  font-size: 15px;
 }
 .forecast img {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
 }
